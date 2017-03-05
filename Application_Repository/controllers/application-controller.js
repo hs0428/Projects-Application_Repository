@@ -7,12 +7,12 @@ controller('ApplicationController', function($routeParams,$http,$scope){
   var data = [
        {
          'application'        : 'Wallstreet Systems',
-         'server'             : 'lapprib00001054',
+         'server'             : 'Lxxxxxxxxxxxxx',
          'OS Type'            : 'Linux'
        },
        {
          'application'        : 'Calypso',
-         'server'             : 'lapprib00001073',
+         'server'             : 'Lxxxxxxxxxxxxx',
          'OS Type'            : 'Linux'
        }
      ];
