@@ -1,0 +1,59 @@
+<html lang="en" >
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Angular Material style sheet -->
+  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+</head>
+<body ng-app="InventoryApp" ng-cloak>
+  <!--
+    Your HTML content here
+  -->
+  <div ng-controller="DemoCtrl as ctrl" layout="column" ng-cloak>
+  <md-content class="md-padding">
+    <form ng-submit="$event.preventDefault()">
+      <p> Inventory</p>
+    <!--  <p>Use <code>md-autocomplete</code> to search for matches from local or remote data sources.</p> -->
+      <md-autocomplete
+            ng-disabled="ctrl.isDisabled"
+            md-no-cache="ctrl.noCache"
+            md-selected-item="ctrl.selectedItem"
+            md-search-text-change="ctrl.searchTextChange(ctrl.searchText)"
+            md-search-text="ctrl.searchText"
+            md-selected-item-change="ctrl.selectedItemChange(item)"
+            md-items="item in ctrl.querySearch(ctrl.searchText)"
+            md-item-text="item.name"
+            md-min-length="0"
+            placeholder="Search Applicatoin Inventory"
+            md-menu-class="autocomplete-custom-template">
+          <md-item-template>
+            <span class="item-title">
+            <span> {{item.name}} </span>
+            </span>
+          </md-item-template>
+        </md-autocomplete>
+      <br/>
+    <!--  <md-checkbox ng-model="ctrl.simulateQuery">Simulate query for results?</md-checkbox>
+      <md-checkbox ng-model="ctrl.noCache">Disable caching of queries?</md-checkbox>
+      <md-checkbox ng-model="ctrl.isDisabled">Disable the input?</md-checkbox>
+
+      <p>By default, <code>md-autocomplete</code> will cache results when performing a query.  After the initial call is performed, it will use the cached results to eliminate unnecessary server requests or lookup logic. This can be disabled above.</p> -->
+    </form>
+    </md-content>
+      <div ng-view></div>
+</div>
+
+  <!-- Angular Material requires Angular.js Libraries -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.js"></script>
+
+  <!-- Angular Material Library -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+
+  <!-- Include Script for controller -->
+  <script src="controllers/router.js"></script>
+  <script src="controllers/application-controller.js"></script>
+</body>
+</html>

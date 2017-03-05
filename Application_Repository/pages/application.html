@@ -1,0 +1,50 @@
+<div ng-cloak style="padding-left: 40px">
+  <h3>Your Search can be related to the following Application(s)</h3>
+  <h4>Click on the respective Application name to get the details</h4>
+    <div>
+   <a ng-repeat="data in applicationController.data" href="" ng-click="toogleShow(data)">
+    <li>{{data.application}}</li> </a>
+    </div>
+</div>
+<div ng-cloak ng-show="applicationController.showme">
+  <md-content>
+    <md-tabs md-dynamic-height md-border-bottom>
+      <md-tab label="Summary">
+        <md-content class="md-padding">
+          <h1 class="md-display-2">{{applicationName}} - Summary</h1>
+          <p>Place holder for Summary which will include
+          <li> Application Name </li>
+          <li>Support Team Name and DL</li>
+          <li>ASM, AM and Support Management Contact details</li></p>
+        </md-content>
+      </md-tab>
+      <md-tab label="Server Details">
+        <md-content class="md-padding">
+          <h1 class="md-display-2">Server Details</h1>
+          <p>Place holder for Server Details</p>
+        </md-content>
+      </md-tab>
+      <md-tab label="Vendor Details">
+        <md-content class="md-padding">
+          <h1 class="md-display-2">Vendor Details</h1>
+           </md-content>
+      </md-tab>
+      <md-tab label="Business Line Details">
+        <md-content class="md-padding">
+          <h1 class="md-display-2">Business Line Details</h1>
+           </md-content>
+      </md-tab>
+      <md-tab label="Schedule Tasks Details">
+        <md-content class="md-padding">
+          <h1 class="md-display-2">Job Details</h1>
+           </md-content>
+      </md-tab>
+      <md-tab label="Other Details">
+        <md-content class="md-padding">
+          <h1 class="md-display-2">Other Details</h1>
+           </md-content>
+      </md-tab>
+    </md-tabs>
+  </md-content>
+</div>
+
