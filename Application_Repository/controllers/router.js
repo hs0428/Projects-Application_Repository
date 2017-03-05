@@ -72,12 +72,12 @@ $location.path('/application/' + item.name);
 function loadAll() {
   var repos = [
        {
-         'name'        : 'PWL_COA_DAILY',
+         'name'        : 'PWL_XXXXXXXXXXX',
          'applicaiton' : 'WSS',
          'type'        : 'Autosys Job'
        },
        {
-         'name'        : 'lapprib00001054',
+         'name'        : 'LXXXXXXXXXXXXXXX',
          'applicaiton' : 'WSS',
          'type'        : 'Server'
        },
